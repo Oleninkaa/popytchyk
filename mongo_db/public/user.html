@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poputchyk</title>
+    
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inria+Sans:300,300italic,regular,italic,700" rel="stylesheet" />
+   
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header" id="header">
+            <div class="header__container">
+                <a href="" class="header__logo">poputchyk</a>
+            </div>
+        </header>
+        <main class="page">
+            <section class="page__preface preface">
+                <div class="preface__container">
+                    <div class="preface__img image">
+                        <img src="/img/01.jpg" alt="Image">
+                    </div>
+                    <div class="preface__content">
+                        <div class="preface__title">Знайди собі попутчика!</div>
+                        <div class="preface__text">Заповни анкету, а наша система знайде людину, яка прямує туди ж!</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page_form form">
+                <form class="form__container" id="form">
+                    
+                    <div class="form__contacts">
+                        <div class="form__title title">
+                            Контактна інформація
+                            <img src="img/mountain.svg" alt="" class="mountain">
+                        </div>
+                        <div class="form__elements">
+                            <input type="hidden" id="userId" />
+                            <div class="form__input input">
+                                <div class="form__label label">Ім'я</div>
+                                <input id="userName" type="text" />
+                            </div>
+                            <div class="form__input input">
+                                <div class="form__label label">Прізвище</div>
+                                <input id="userSurname" type="text" />
+                            </div>
+                            <div class="form__input input">
+                                <div class="form__label label">Номер телефону</div>
+                                <input id="userPhone" />
+                            </div>
+                            <div class="form__input input">
+                                <div class="form__label label">Електронна пошта</div>
+                                <input id="userEmail"  type="email"/>
+                            </div>
+                        </div>
+                      
+                    </div>
+
+                    <div class="form__about about">
+
+                        
+                        <div class="about__input input">
+                            <div class="about__label label">Звідки прямуєте</div>
+                            <input id="userStart" type="text" />
+                        </div>
+                        <div class="about__input input">
+                            <div class="about__label label">Куди прямуєте</div>
+                            <input id="userFinish" type="text" />
+                        </div>
+                        <div class="about__input input">
+                            <div class="about__label label">Дата подорожі</div>
+                            <input id="userDate" type="date" />
+                        </div>
+                        
+
+                        
+                        <div class="about__title title">
+                            Про подорож
+                            <img src="img/mountain.svg" alt="" class="mountain-r">
+                        </div>
+                        
+                        <div class="about__textarea textarea">
+                            <div class="about__label label">Коментарі</div>
+                            <textarea id="userComment" cols="30" rows="8"></textarea>
+                        </div>
+                        
+                      
+                        
+                      
+                    </div>
+
+
+                    <div class="form__post post">
+                        <button id="saveBtn" class="post__save title">Надіслати</button>
+                        <button id="resetBtn"  class="post__reset title">Очистити</button>
+                    </div>
+                </form>
+            </section>
+
+
+            <section class="page__info info">
+                <div class="info__container">
+                   <div class="info__wrapping">
+                        <div class="info__content">
+                            <div class="info__title">Залишишилось ще трохи!</div>
+                            <div class="info__text">Переглянь список попутчиків і віднайди компаньйона.</div>
+                        </div>
+                        <div class="info__img image"><img src="/img/02.jpg" alt="Image"></div>
+                        <div class="info__deco image"><img src="/img/path.svg" alt="Image"></div>
+                    </div>
+                </div>
+            </section>
+;
+            <section class="page__table table">
+                <div class="table__container">
+                    <table class="table__body">
+                        <thead>
+                            <tr>
+                                
+                                <th>Ім'я</th>
+                                <th>Старт</th>
+                                <th>Фініш</th>
+                                <th>Дата</th>
+                                <th>Про подорож</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="footer__container">
+                    <a href="" class="header__logo">poputchyk</a>
+                </div>
+            </footer>
+    
+            
+        </main>
+    </div>
+
+    <script src="/script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> WebPython. FastAPI приклад #3</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="message"></div>
+<p>
+Введіть ім'я: <br />
+<input name="username" id="username" />
+</p>
+<p>
+Введіть вік: <br />
+<input name="userage" id="userage" type="number" />
+</p>
+<button onclick="send()">Надіслати</button>
+<script>
+async function send(){
+// отримуємо введені в поля ім'я та вік
+const username = document.getElementById("username").value;
+const userage = document.getElementById("userage").value;
+// надсилаємо запит
+const response = await fetch("/hello", {
+method: "POST",
+headers: { "Accept": "application/json", "Content-Type":
+
+"application/json" },
+
+body: JSON.stringify({
+name: username,
+age: userage
+})
+});
+if (response.ok) {
+const data = await response.json();
+document.getElementById("message").textContent = data.message;
+}
+else
+console.log(response);
+
+}
+</script>
+</body>
+</html>
