@@ -9,7 +9,7 @@
 <h1>Адміністратор</h1>
 
 
-<table>
+<table id="customers">
     <tr>
         <th>id</th>
         <th>name</th>
@@ -33,7 +33,7 @@
     </tr>
 {% endfor %}
 </table>
-
-<div class="btn"><a href="{% url 'index' %}">На головну</a></div>
+<br><br>
+<div ><a href="{% url 'index' %}">На головну</a></div>
 
 {% endblock %}

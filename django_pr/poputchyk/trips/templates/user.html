@@ -3,7 +3,7 @@
 
 <h1>Користувач</h1>
 
-<table>
+<table id="customers">
     <tr>
         <th>name</th>
         <th>start</th>
@@ -20,6 +20,7 @@
 {% endfor %}
 </table>
 
-<div class="btn"><a href="{% url 'index' %}">На головну</a></div>
+<br><br>
+<div><a href="{% url 'index' %}">На головну</a></div>
 
 {% endblock %}
