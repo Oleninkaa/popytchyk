@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+   
+
+
+{% block content %}
+
+
+<h1>Адміністратор</h1>
+
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>surname</th>
+        <th>start</th>
+        <th>finish</th>
+        <th>date</th>
+        <th>phone</th>
+        <th>email</th>
+    </tr>
+    {% for trip in trips %}
+    <tr>
+        <td>{{trip.id}}</td>
+        <td>{{trip.name}}</td>
+        <td>{{trip.surname}}</td>
+        <td>{{trip.start}}</td>
+        <td>{{trip.finish}}</td>
+        <td>{{trip.date}}</td>
+        <td>{{trip.phone}}</td>
+        <td>{{trip.email}}</td>
+    </tr>
+{% endfor %}
+</table>
+
+<div class="btn"><a href="{% url 'index' %}">На головну</a></div>
+
+{% endblock %}

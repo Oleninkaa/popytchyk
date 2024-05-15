@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+   
+
+
+{% block content %}
+
+
+<h1>Оберіть роль</h1>
+<div class="btn"><a href="{% url 'user' %}">Користувач</a></div>
+<div class="btn"><a href="{% url 'admin' %}">Адміністратор</a></div>
+{% endblock %}

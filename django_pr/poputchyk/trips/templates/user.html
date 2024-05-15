@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Користувач</h1>
+
+<table>
+    <tr>
+        <th>name</th>
+        <th>start</th>
+        <th>finish</th>
+        <th>date</th>
+    </tr>
+    {% for trip in trips %}
+    <tr>
+        <td>{{trip.name}}</td>
+        <td>{{trip.start}}</td>
+        <td>{{trip.finish}}</td>
+        <td>{{trip.date}}</td>
+    </tr>
+{% endfor %}
+</table>
+
+<div class="btn"><a href="{% url 'index' %}">На головну</a></div>
+
+{% endblock %}
