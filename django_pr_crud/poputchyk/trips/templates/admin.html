@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+   
+
+
+{% block content %}
+
+
+<h1>Адміністратор</h1>
+
+
+<form method="POST", action="{% url 'admin' %}">
+{% csrf_token %}
+    <table id="customers">
+        <tr>
+            <th>name</th>
+            <th>surname</th>
+            <th>start</th>
+            <th>finish</th>
+            <th>date</th>
+            <th>phone</th>
+            <th>email</th>
+            <th>action</th>
+        </tr>
+        {% if not form.instance.id %}
+        <tr>
+            {% include 'save.html' %}
+        </tr>
+        {% endif %}
+    
+    
+        {% for trip in trips %}
+        <tr>
+            {% if form.instance.id == trip.id %}
+            {% include 'save.html' %}
+            {% else %}
+            
+            <td>{{trip.name}}</td>
+            <td>{{trip.surname}}</td>
+            <td>{{trip.start}}</td>
+            <td>{{trip.finish}}</td>
+            <td>{{trip.date}}</td>
+            <td>{{trip.phone}}</td>
+            <td>{{trip.email}}</td>
+            <td>
+                <button formnovalidate name="edit"  value="{{trip.id}}">Edit</button>
+                <button formnovalidate name="delete" value="{{trip.id}}">Delete</button>
+            </td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+    </table>
+</form>
+
+
+<br><br>
+<div ><a href="{% url 'index' %}">На головну</a></div>
+
+{% endblock %}

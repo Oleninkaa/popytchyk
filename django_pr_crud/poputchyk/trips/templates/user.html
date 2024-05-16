@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Користувач</h1>
+<form method="POST", action="{% url 'user' %}">
+    {% csrf_token %}
+    <table id="customers">
+        <tr>
+            
+            <th>name</th>
+            <th>start</th>
+            <th>finish</th>
+            <th>date</th>
+            <th>action</th>
+        </tr>
+
+
+        <tr>
+            {% for field in form %}
+            <td>{{field}}</td>
+            
+            {% endfor %}
+            <td><button name="save">Save</button></td>
+        </tr>
+
+        {% for trip in trips %}
+        <tr>
+           
+            <td>{{trip.name}}</td>
+            <td>{{trip.start}}</td>
+            <td>{{trip.finish}}</td>
+            <td>{{trip.date}}</td>
+            <td></td>
+        </tr>
+    {% endfor %}
+    </table>
+</form>
+
+<br><br>
+<div><a href="{% url 'index' %}">На головну</a></div>
+
+{% endblock %}

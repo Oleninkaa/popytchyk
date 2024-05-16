@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+   
+
+
+{% block content %}
+
+
+<section class="index">
+    <h1>Оберіть роль</h1>
+    <div class="btns">
+        <a href="{% url 'user' %}"><div class="btn">Користувач</div></a>
+        
+        <a href="{% url 'admin' %}"><div class="btn">Адміністратор</div></a>
+    </div>
+</section>
+{% endblock %}
