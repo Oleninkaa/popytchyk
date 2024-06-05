@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Редагувати поїздку</h1>
+
+<form method="POST" action="">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" value="{{ trip.name }}"><br>
+    <label for="surname">Surname:</label><br>
+    <input type="text" id="surname" name="surname" value="{{ trip.surname }}"><br>
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone" value="{{ trip.phone }}"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" value="{{ trip.email }}"><br>
+    <label for="start">Start:</label><br>
+    <input type="text" id="start" name="start" value="{{ trip.start }}"><br>
+    <label for="finish">Finish:</label><br>
+    <input type="text" id="finish" name="finish" value="{{ trip.finish }}"><br>
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" name="date" value="{{ trip.date }}"><br>
+    <label for="comment">Comment:</label><br>
+    <input type="text" id="comment" name="comment" value="{{ trip.comment }}"><br><br>
+    <input type="submit" value="Update">
+</form>
+
+<div><a href="/admin">Back to Admin</a></div>
+{% endblock %}

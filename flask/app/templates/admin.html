@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Адміністратор</h1>
+
+<h2>Користувачі</h2>
+<table id="customers">
+    <tr>
+        <th>Ім'я</th>
+        <th>Користувач</th>
+        <th>Email</th>
+        <th>Дія</th>
+    </tr>
+    {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('edit_user', user_id=user.id) }}">
+                    <button formnovalidate name="edit_user" value="{{ user.id }}">Редагувати</button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+<h2>Додати нового користувача</h2>
+<form method="post" action="{{ url_for('create_user') }}">
+    <label>Ім'я:</label>
+    <input type="text" name="name" required>
+    <br>
+    <label>Користувач:</label>
+    <input type="text" name="username" required>
+    <br>
+    <label>Email:</label>
+    <input type="email" name="email" required>
+    <br>
+    <label>Пароль:</label>
+    <input type="password" name="password" required>
+    <br>
+
+    <button type="submit">Створити користувача</button>
+</form>
+
+<h2>Поїздки</h2>
+<table id="customers">
+    <tr>
+        <th>Ім'я</th>
+        <th>Прізвище</th>
+        <th>Початок</th>
+        <th>Кінець</th>
+        <th>Дата</th>
+        <th>Телефон</th>
+        <th>Email</th>
+        <th>Коментар</th>
+        <th>Дія</th>
+    </tr>
+    {% for trip in trips %}
+        <tr>
+            <td>{{ trip.name }}</td>
+            <td>{{ trip.surname }}</td>
+            <td>{{ trip.start }}</td>
+            <td>{{ trip.finish }}</td>
+            <td>{{ trip.date }}</td>
+            <td>{{ trip.phone }}</td>
+            <td>{{ trip.email }}</td>
+            <td>{{ trip.comment }}</td>
+            <td>
+                <form method="POST" action="">
+                    <button formnovalidate name="edit" value="{{ trip.id }}">Редагувати</button>
+                    <button formnovalidate name="delete" value="{{ trip.id }}">Видалити</button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+<br><br>
+<p><a href="{{ url_for('logout') }}">Вийти</a></p>
+<div><a href="/">На головну</a></div>
+
+{% endblock %}

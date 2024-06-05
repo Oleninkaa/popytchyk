@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+</head>
+<body>
+    <h1>Edit User</h1>
+    <form method="post">
+        <label>Name:</label>
+        <input type="text" name="name" value="{{ user.name }}">
+        <br>
+        <label>Username:</label>
+        <input type="text" name="username" value="{{ user.username }}">
+        <br>
+        <label>Email:</label>
+        <input type="email" name="email" value="{{ user.email }}">
+        <br>
+        <label>Password:</label>
+        <input type="password" name="password">
+        <br>
+        <button type="submit">Save</button>
+    </form>
+    <a href="{{ url_for('admin') }}">Back to Admin Panel</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Додати нового користувача</h1>
+
+<form method="POST" action="">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="surname">Surname:</label><br>
+    <input type="text" id="surname" name="surname" required><br>
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone" required><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="start">Start:</label><br>
+    <input type="text" id="start" name="start" required><br>
+    <label for="finish">Finish:</label><br>
+    <input type="text" id="finish" name="finish" required><br>
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" name="date" required><br>
+    <label for="comment">Comment:</label><br>
+    <input type="text" id="comment" name="comment"><br><br>
+    <input type="submit" value="Create">
+</form>
+
+<div><a href="/user">Back to user</a></div>
+{% endblock %}

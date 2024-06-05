@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Користувач</h1>
+
+<form method="GET" action="">
+    <table id="customers">
+        <tr>
+            <th>name</th>
+            <th>start</th>
+            <th>finish</th>
+            <th>date</th>
+            <th>comment</th>
+        </tr>
+        {% for trip in data %}
+            <tr>
+                <td>{{ trip.name }}</td>
+                <td>{{ trip.start }}</td>
+                <td>{{ trip.finish }}</td>
+                <td>{{ trip.date }}</td>
+                <td>{{ trip.comment }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</form>
+
+
+<div class="btns_create">
+        <a href="/create_user"><div class="btn">Додати нову поїздку</div></a>
+</div>
+
+<br><br>
+<div><a href="/">На головну</a></div>
+
+{% endblock %}

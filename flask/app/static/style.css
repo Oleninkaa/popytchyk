@@ -1,0 +1,142 @@
+h1 {
+    text-align: center;
+}
+
+.index {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btns {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.btns_create {
+    margin-top: 30px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+}
+
+.btns_create div {
+    font-weight: 500;
+    background: green;
+    color: white;
+}
+
+.btn {
+    text-align: center;
+    min-width: 200px;
+    min-height: 50px;
+    background-color: rgb(186, 186, 186);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    max-width: 30px;
+
+}
+
+tr{
+    height:70px;
+
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+#customers th:nth-child(1),
+#customers td:nth-child(1) {
+    max-width: 10px;
+}
+
+td input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 5px;
+    display:flex;
+    flex-direction:column
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"] {
+    width: 300px;
+    padding: 10px;
+    margin: 0 0 5px 0;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    width: 320px;
+    padding: 10px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #045d40;
+}
+
+form div {
+    margin-top: 20px;
+}
